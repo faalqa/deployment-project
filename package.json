@@ -11,8 +11,6 @@
         "api:build": "cd udagram/udagram-api && npm run build",
         "api:start": "cd udagram/udagram-api && npm run dev",
         "api:deploy": "cd udagram/udagram-api && npm run deploy",
-        "deploy": "npm run api:deploy && npm run frontend:deploy",
-        "aws:config": "aws configure set aws_access_key_id \"$AWS_ACCESS_KEY_ID\" --profile \"$AWS_PROFILE\" && aws configure set aws_secret_access_key \"$AWS_ACCESS_KEY_SECRET\" --profile \"$AWS_PROFILE\" && aws configure set region \"$AWS_REGION\" && aws configure set output \"json\"",
-        "eb:init": "cd udagram/udagram-api && eb init udagram-api --platform node.js --region \"$AWS_REGION\" "
+        "deploy": "npm run api:deploy && npm run frontend:deploy"
     }
 }
