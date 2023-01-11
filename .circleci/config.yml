@@ -20,6 +20,8 @@ jobs:
       - run:
           name: Set EB Environment Variables
           command: |
+            cd udagram/udagram-api
+            npm run eb:init
             eb setenv AWS_PROFILE=$AWS_PROFILE
             eb setenv AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
             eb setenv AWS_BUCKET=$AWS_BUCKET
@@ -75,6 +77,8 @@ jobs:
       - run:
           name: Set EB Environment Variables
           command: |
+            cd udagram/udagram-api
+            npm run eb:init
             eb setenv AWS_PROFILE=$AWS_PROFILE
             eb setenv AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
             eb setenv AWS_BUCKET=$AWS_BUCKET
